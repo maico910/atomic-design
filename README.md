@@ -1,4 +1,6 @@
-# atomic
+# atomic-design
+
+Cataline - Atomic Design
 
 ## Project setup
 ```
