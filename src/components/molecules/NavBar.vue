@@ -1,9 +1,11 @@
 <template>
   <nav class="nav-bar">
-    <NavItem text="Serviços" to="/services" />
-    <NavItem text="Sobre mim" to="/abiyt" />
-    <NavItem text="Cases" to="/cases" />
-    <NavItem text="Contato" to="/contact" />
+    <NavItem
+      v-for="(item, index) in items"
+      :key="index"
+      :text="item.text"
+      :to="item.to"
+    />
   </nav>
 </template>
 
@@ -14,6 +16,16 @@ import { NavItem } from '@/components/atoms'
 export default defineComponent({
   components: {
     NavItem
+  },
+  data() {
+    return {
+      items: [
+        { text: 'Serviços', to: '/services' },
+        { text: 'Sobre mim', to: '/about' },
+        { text: 'Cases', to: '/cases' },
+        { text: 'Contato', to: '/contact' }
+      ]
+    }
   }
 })
 </script>

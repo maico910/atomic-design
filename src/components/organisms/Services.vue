@@ -1,18 +1,10 @@
 <template>
   <div class="services">
     <Service
-      title="Front End"
-      description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius nihil recusandae officiis, repudiandae quas error cumque assumenda deserunt. Minima velit maiores est. Ad illum culpa cumque ipsum numquam officiis."
-    />
-
-    <Service
-      title="Back End"
-      description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius nihil recusandae officiis, repudiandae quas error cumque assumenda deserunt. Minima velit maiores est. Ad illum culpa cumque ipsum numquam officiis."
-    />
-
-    <Service
-      title="Manutenção"
-      description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius nihil recusandae officiis, repudiandae quas error cumque assumenda deserunt. Minima velit maiores est. Ad illum culpa cumque ipsum numquam officiis."
+      v-for="(service, index) in services"
+      :key="index"
+      :description="service.description"
+      :title="service.title"
     />
   </div>
 </template>
@@ -24,6 +16,27 @@ import { Service } from '@/components/molecules'
 export default defineComponent({
   components: {
     Service
+  },
+  data() {
+    return {
+      services: [
+        {
+          title: 'Front End',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius nihil recusandae officiis, repudiandae quas error cumque assumenda deserunt. Minima velit maiores est. Ad illum culpa cumque ipsum numquam officiis.'
+        },
+        {
+          title: 'Back End',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius nihil recusandae officiis, repudiandae quas error cumque assumenda deserunt. Minima velit maiores est. Ad illum culpa cumque ipsum numquam officiis.'
+        },
+        {
+          title: 'Manutençãp',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius nihil recusandae officiis, repudiandae quas error cumque assumenda deserunt. Minima velit maiores est. Ad illum culpa cumque ipsum numquam officiis.'
+        }
+      ]
+    }
   }
 })
 </script>
