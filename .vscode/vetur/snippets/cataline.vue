@@ -1,5 +1,5 @@
 <template>
-  <div class="component"></div>
+  <div class="component-class"></div>
 </template>
 
 <script lang="ts">
@@ -9,7 +9,7 @@ export default defineComponent({})
 </script>
 
 <style lang="scss" scoped>
-.component {
+.component-class {
 
 }
 </style>
