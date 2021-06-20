@@ -1,11 +1,15 @@
 <template>
-  <h1>Cataline</h1>
+  <div class="component">
+    <Home />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { Home } from '@/components/templates'
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  components: { Home }
 })
 </script>
